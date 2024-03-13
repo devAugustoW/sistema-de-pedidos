@@ -1,0 +1,25 @@
+.box-pedido {
+   border: 1px solid #cccccc;
+   padding: 40px;
+   border-radius: 20px;
+   margin: 0 30px;
+}
+
+
+@media screen and (max-width: 700px) {
+
+   .titulo h1{
+      font-size: 1.7rem;
+      margin-top: -1.3rem;
+   }
+
+   .box-pedido {
+      font-size: 0.7rem;
+      padding: 0;
+   }
+
+   .table td {
+      padding: 10px; 
+   }
+
+}
