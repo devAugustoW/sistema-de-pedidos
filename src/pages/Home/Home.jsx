@@ -13,7 +13,7 @@ const Home = () => {
     api.get("/produtos")
       .then((resp) => setProdutos(resp.data))
       .catch((err) => alert("Erro ao carregar produtos."));
-  })
+  }, [])
 
   return (
     <div>
