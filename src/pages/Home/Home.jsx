@@ -37,7 +37,6 @@ const Home = () => {
               foto={produto.foto} />
           ))
         }
-
       </div> 
     </div>
   )
