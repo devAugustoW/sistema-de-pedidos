@@ -76,7 +76,8 @@ const Checkout = () => {
             <input 
               type="text" 
               id="nome" 
-              onChange={(e) => setNome(e.target.value)} />
+              onChange={(e) => setNome(e.target.value)}
+              rerquired />
           </div>
 
           <div className="input-group">
@@ -84,7 +85,8 @@ const Checkout = () => {
             <input 
               type="email" 
               id="email"  
-              onChange={(e) => setEmail(e.target.value)} />
+              onChange={(e) => setEmail(e.target.value)}
+              rerquired />
           </div>
 
           <div className="input-group">
@@ -92,7 +94,8 @@ const Checkout = () => {
             <input 
               type="text" 
               id="fone"  
-              onChange={(e) => setFone(e.target.value)} />
+              onChange={(e) => setFone(e.target.value)}
+              rerquired />
           </div>
         </div>
       </div>
@@ -106,7 +109,8 @@ const Checkout = () => {
               <input 
                 type="text" 
                 id="cep"  
-                onChange={(e) => setCep(e.target.value)}/>
+                onChange={(e) => setCep(e.target.value)}
+                rerquired/>
             </div>
 
             <div className="input-group">
@@ -114,7 +118,8 @@ const Checkout = () => {
               <input 
                 type="text" 
                 id="endereco" 
-                onChange={(e) => setEndereco(e.target.value)} />
+                onChange={(e) => setEndereco(e.target.value)}
+                rerquired />
             </div>
 
             <div className="input-group numero-complemento">
@@ -122,7 +127,8 @@ const Checkout = () => {
                 <p>Número</p>
                 <input 
                   type="number" 
-                  id="numero" />
+                  id="numero"
+                  rerquired />
               </div>
 
               <div>
@@ -138,7 +144,8 @@ const Checkout = () => {
               <input 
                 type="text" 
                 id="bairro" 
-                onChange={(e) => setBairro(e.target.value)} />
+                onChange={(e) => setBairro(e.target.value)}
+                rerquired />
             </div>
 
             <div className="input-group">
@@ -146,7 +153,8 @@ const Checkout = () => {
               <input 
                 type="text" 
                 id="cidade"  
-                onChange={(e) => setCidade(e.target.value)}/>
+                onChange={(e) => setCidade(e.target.value)}
+                rerquired />
             </div>
 
             <div className="input-group">
