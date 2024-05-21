@@ -34,7 +34,7 @@ const ProdutoVitrine = (props) => {
       </div>
 
       <div>
-        <button onClick={addItem} className="btn-cart">
+        <button onClick={addItem} className="btn-cart2">
           <img src={bg} className="icon" alt="Sacola para adcionar produto" />
           <span className="btn-add">Adicionar</span>
         </button>
