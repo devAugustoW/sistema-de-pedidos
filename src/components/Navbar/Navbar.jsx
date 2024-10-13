@@ -1,40 +1,51 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png"
-import bag from "../../assets/bag.png";
+import { useContext, useEffect, useState } from "react";
+import { CartContext } from "../../contexts/CartContext.jsx";
+import logo from "../../assets/logo.png";
+import carrinho from "../../assets/carrinho.png";
 import Cart from "../Cart/Cart";
 
-
 const Navbar = (props) => {
+  const { getTotalItems } = useContext(CartContext);
+  const [animate, setAnimate] = useState(false);
 
-   function openSidebar(){
-      const event = new CustomEvent('openSidebar');
-      window.dispatchEvent(event);
- }
+  useEffect(() => {
+    if (getTotalItems() > 0) {
+      setAnimate(true);
+      const timer = setTimeout(() => setAnimate(false), 500);
+      return () => clearTimeout(timer);
+    }
+  }, [getTotalItems()]);
 
-   return (
-      <div className="navbar">
-         <Link to="/">
-            <img src={logo} alt="Logotipo" className="logotipo"/>
-         </Link>
+  function openSidebar() {
+    const event = new CustomEvent("openSidebar");
+    window.dispatchEvent(event);
+  }
 
-         {
-            props.showMenu ? 
-               <div className="menu">
-                  <Link to="/historico">Historico</Link>
+  return (
+    <div className="navbar">
+      <Link to="/">
+        <img src={logo} alt="Logotipo" className="logotipo" />
+      </Link>
 
-                  <button onClick={openSidebar} className="btn btn-red btn-sacola">
-                     <img src={bag} alt="sacola" className="icon icon-sacola" />
-                     Sacola
-                  </button>
-               </div>
-            : null
-         }
-      
-         <Cart />
-      
-      </div>
-   )
-}
+      {props.showMenu ? (
+        <div className="menu">
+          <Link to="/historico">Historico</Link>
+
+          <button
+            onClick={openSidebar}
+            className={`btn btn-red btn-sacola ${animate ? "animate" : ""}`}
+          >
+            <img src={carrinho} alt="sacola" className="icon icon-sacola" />
+            Pedido ({getTotalItems()})
+          </button>
+        </div>
+      ) : null}
+
+      <Cart />
+    </div>
+  );
+};
 
 export default Navbar;
