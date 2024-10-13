@@ -1,6 +1,5 @@
 import "./ProdutoVitrine.css";
-import bg from "../../assets/bag-black.png"
-
+import carrinho_2 from "../../assets/carrinho-2.png";
 import { CartContext } from "../../contexts/CartContext.jsx";
 import { useContext } from "react";
 
@@ -35,7 +34,7 @@ const ProdutoVitrine = (props) => {
 
       <div>
         <button onClick={addItem} className="btn-cart2">
-          <img src={bg} className="icon2" alt="Sacola para adcionar produto" />
+          <img src={carrinho_2} className="icon2" alt="Sacola para adcionar produto" />
           <span className="btn-add">Adicionar</span>
         </button>
       </div>

@@ -5,9 +5,6 @@ import Checkout from "./pages/Checkout/Checkout";
 import Historico from "./pages/Historico/Historico";
 
 
-
-
-
 const Rotas = () => {
 
    return (

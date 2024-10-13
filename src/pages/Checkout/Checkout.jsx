@@ -19,10 +19,21 @@ const Checkout = () => {
   const [cidade, setCidade] = useState("");
   const [uf, setUf] = useState("");
 
-
   const navigate = useNavigate();
   
+  function validarFormulario() {
+    if (!nome || !email || !fone || !cep || !endereco || !bairro || !cidade || !uf) {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+      return false;
+    }
+    return true;
+  }
+
   function finalizarPedido() {
+    if (!validarFormulario()) {
+      return;
+    }
+
     let produtos= [];
 
     for (var prod of cartItems){
@@ -55,8 +66,6 @@ const Checkout = () => {
       navigate('/historico');
     })
     .catch((err) => alert("Erro ao enviar pedido."))
-
-    //navigate("/historico")
   }
 
   return (
@@ -77,7 +86,7 @@ const Checkout = () => {
               type="text" 
               id="nome" 
               onChange={(e) => setNome(e.target.value)}
-              rerquired />
+              required />
           </div>
 
           <div className="input-group">
@@ -86,7 +95,7 @@ const Checkout = () => {
               type="email" 
               id="email"  
               onChange={(e) => setEmail(e.target.value)}
-              rerquired />
+              required />
           </div>
 
           <div className="input-group">
@@ -95,7 +104,7 @@ const Checkout = () => {
               type="text" 
               id="fone"  
               onChange={(e) => setFone(e.target.value)}
-              rerquired />
+              required />
           </div>
         </div>
       </div>
@@ -110,16 +119,16 @@ const Checkout = () => {
                 type="text" 
                 id="cep"  
                 onChange={(e) => setCep(e.target.value)}
-                rerquired/>
+                required/>
             </div>
 
             <div className="input-group">
-              <p>Enderço</p>
+              <p>Endereço</p>
               <input 
                 type="text" 
                 id="endereco" 
                 onChange={(e) => setEndereco(e.target.value)}
-                rerquired />
+                required />
             </div>
 
             <div className="input-group numero-complemento">
@@ -128,7 +137,7 @@ const Checkout = () => {
                 <input 
                   type="number" 
                   id="numero"
-                  rerquired />
+                  required />
               </div>
 
               <div>
@@ -145,7 +154,7 @@ const Checkout = () => {
                 type="text" 
                 id="bairro" 
                 onChange={(e) => setBairro(e.target.value)}
-                rerquired />
+                required />
             </div>
 
             <div className="input-group">
@@ -154,12 +163,13 @@ const Checkout = () => {
                 type="text" 
                 id="cidade"  
                 onChange={(e) => setCidade(e.target.value)}
-                rerquired />
+                required />
             </div>
 
             <div className="input-group">
               <p>UF</p>
-                <select id="uf" onChange={(e) => setUf(e.target.value)}>
+                <select id="uf" onChange={(e) => setUf(e.target.value)} required>
+                  <option value="">Selecione</option>
                   <option value="AC">Acre</option>
                   <option value="AL">Alagoas</option>
                   <option value="AP">Amapá</option>
@@ -192,7 +202,6 @@ const Checkout = () => {
             </div>
         </div>
       </div>
-
 
       <div className="col-3">
            <div className="box-checkout">
