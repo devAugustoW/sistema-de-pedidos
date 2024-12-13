@@ -1,5 +1,8 @@
 # Sistema de Pedidos 📦🛒
 
+https://github.com/user-attachments/assets/e154d4f4-47b9-4cd9-88f8-692b37a6952a
+
+
 <br>
 
 ## Descrição 📝
@@ -12,9 +15,9 @@ O Sistema de Pedidos é uma aplicação web para gestão de pedidos.
 ## Tecnologias 💻
 ### Frontend
 - React
-- Vite
-- Axios
 - React Router DOM
+- Axios
+
 
 ### Backend
 - Node.js
