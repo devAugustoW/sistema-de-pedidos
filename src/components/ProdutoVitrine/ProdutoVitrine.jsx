@@ -4,11 +4,9 @@ import { CartContext } from "../../contexts/CartContext.jsx";
 import { useContext } from "react";
 
 const ProdutoVitrine = (props) => {
-
   const {addItemCart} = useContext(CartContext);
 
   function addItem() {
-
     const item = {
       id: props.id,
       nome: props.nome,
@@ -22,8 +20,7 @@ const ProdutoVitrine = (props) => {
 
   return (
     <div className="produto-box text-center">
-      <img className="img" src={props.foto} alt="Hamburguer" />
-      
+      <img className="img" src={props.foto} alt={props.nome} />
       <div>
         <h2 className="prod-vitrine-titulo">{props.nome}</h2>
         <p className="prod-vitrine-descricao">{props.descricao}</p>

@@ -1,32 +1,51 @@
 .box-checkout {
-   border: 1px solid #cccccc;
-   border-radius: 4px;
-   margin: 25px;
-   padding: 20px;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	margin: 25px;
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .box-checkout h3 {
-   margin-top: 0px;
+	margin-top: 0px;
 }
+.input-group input, .input-group select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus, .input-group select:focus {
+  border-color: #E84F3D; /* Cor de foco */
+}
+
 .input-group p {
-   margin: 12px 0 0 0;
+	margin: 12px 0 0 0;
 }
 .numero-complemento {
+	display: flex;
+	gap: 5px;
+}
 
-   display: flex;
-   gap: 5px;
-}
 #numero {
-   width: 70%;
+	width: 70%;
 }
+
 .checkout-valores {
-   display: flex;
-   justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9; /* Fundo diferente */
+  border-radius: 4px;
 }
+
 .checkout-button {
-   margin-top: 100px;
+	margin-top: 100px;
 }
 
 .btn-checkout2 {
-   margin-top: 10px;
+	margin-top: 10px;
 }
-

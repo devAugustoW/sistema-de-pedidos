@@ -1,13 +1,12 @@
 .produto-cart-box{
-   border: 1px solid #E9E9E9;
-   padding: 10px 5px;  
-   display: flex;  
-   margin: 10px;
+	border: 1px solid #E9E9E9;
+	padding: 10px 5px;  
+	display: flex;  
+	margin: 10px;
+  padding: 10px 0;
+	border-bottom: 1px solid #E9E9E9; /* Linha divisória */
 }
-.produto-cart-container {
-   
-   
-}
+
 .produto-cart-box img{
    width: 100px;
    height: 100px;
@@ -41,15 +40,18 @@
    align-items: center;
 }
 
-.footer-produto-btn{
-   border: 1px solid #cacaca;
-   padding: 7px 12px;
-   border-radius: 0px;
-   background-color: #fff;
-   cursor: pointer;
+.footer-produto-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
 .footer-produto-btn:hover {
-   background-color: #f7f7f7;
+  background-color: #e0e0e0;
 }
 
 .footer-produto-qtd{
@@ -58,10 +60,10 @@
 }
 
 .footer-produto-preco{
-   color: #E84F3D;    
-   font-size: 1rem; 
-   font-weight: bold;
-   line-height: 1rem;
-   display: inline-block;
-   width: 100px;
+	width: 100px;
+	font-size: 1rem;
+	line-height: 1rem; 
+	font-weight: bold;
+	display: inline-block;
+	color: #E84F3D;  
 }

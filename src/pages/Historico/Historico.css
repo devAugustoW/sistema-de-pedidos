@@ -1,28 +1,54 @@
 .historico-container{
-	margin-top: 150px;
+	margin-top: 120px;
+	padding: 20px;
 }
+
 .box-pedido {
-   border: 1px solid #cccccc;
-   padding: 40px;
-   border-radius: 20px;
-   margin: 0 30px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.text-light {
+  color: #666;
+}
+
+.text-red {
+  color: #E84F3D;
+  font-weight: bold;
 }
 
 
 @media screen and (max-width: 700px) {
 
-   .titulo h1{
-      font-size: 1.7rem;
-      margin-top: -1.3rem;
-   }
+	.titulo h1{
+		font-size: 1.7rem;
+		margin-top: -1.3rem;
+	}
 
-   .box-pedido {
-      font-size: 0.7rem;
-      padding: 0;
-   }
+	.box-pedido {
+		font-size: 0.7rem;
+		padding: 0;
+	}
 
-   .table td {
-      padding: 10px; 
-   }
+	.table td {
+		padding: 10px; 
+	}
 
 }

@@ -3,36 +3,30 @@
 <br>
 
 ## Descrição 📝
-O Sistema de Pedidos é uma aplicação web que permite a gestão de pedidos de uma empresa. Utiliza tecnologias modernas como React para o frontend, Axios para requisições HTTP, Node.js e Express para o backend, e SQLite como banco de dados.
+O Sistema de Pedidos é uma aplicação web para gestão de pedidos.
+- **Frontend**: Construído com React e Vite, usando React Router DOM para rotas e Axios para requisições HTTP.
+- **Backend**: Desenvolvido com Node.js e Express, utilizando SQLite como banco de dados.
 
 <br>
 
 ## Tecnologias 💻
-- Frontend: <br>
-    - React <br>
-    - Vite <br>
-    - Axios <br>
-    - React Router DOM <br>
+### Frontend
+- React
+- Vite
+- Axios
+- React Router DOM
 
-<br>
+### Backend
+- Node.js
+- Express
 
-- Backend: <br>
-    - Node.js <br>
-    - Express <br>
+### Banco de Dados
+- SQLite
 
-<br>
-
-- Banco de Dados: <br>
-    - SQLite <br>
-
-<br>
-
-## Estrutura do Projeto 🏗️
-**Frontend** <br>
-O frontend da aplicação é construído utilizando React e Vite. O gerenciamento de rotas é feito com React Router DOM, e as requisições HTTP são realizadas com Axios.<br>
-
-**Backend** <br>
-O backend foi desenvolvido com Node.js e Express, proporcionando uma API robusta para o gerenciamento dos pedidos. O banco de dados utilizado é o SQLite, que é leve e fácil de configurar.
+## Funcionalidades 🚀
+- Adicionar produtos ao carrinho
+- Finalizar pedidos
+- Visualizar histórico de pedidos
 
 <br>
 
